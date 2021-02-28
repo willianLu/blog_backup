@@ -3,6 +3,8 @@ layout: post
 title: "我曾七次鄙视自己的灵魂"
 date: 2021-02-25 12:00
 comments: true
+tags:
+    - 诗歌
 ---
 
 ### 作者：纪·哈·纪伯伦
