@@ -38,9 +38,9 @@ tags:
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[vue]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  // "[vue]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // }
 }
 ```
 
@@ -68,7 +68,7 @@ module.exports = {
     sourceType: 'module',
     parser: 'babel-eslint'
   },
-  parser: 'vue-eslint-parser',
+  extends: ['eslint:recommended', 'plugin:vue/recommended', 'plugin:prettier/recommended'],
   env: {
     browser: true,
     es6: true,
@@ -78,6 +78,10 @@ module.exports = {
   rules: {}
 }
 ```
+
+> extends中'plugin:vue/recommended'，使用插件eslint-plugin-vue，用于vue中template的检测和校验。
+> extends中'plugin:prettier/recommended'，使用插件eslint-plugin-prettier和eslint-config-prettier，用于vue文件的格式化。
+
 在项目根目录下新建 .eslintignore 文件，用于eslint检查忽略的文件目录及文件。内容如下：
 ```txt
 .vscode/
